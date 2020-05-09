@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" description="COM_THAILANDAREA_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="state"
+               type="status"
+               label="COM_THAILANDAREA_FILTER_STATE"
+               description="COM_THAILANDAREA_FILTER_STATE_DESC"
+               onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field name="provinces_zone" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_ZONE" type="list" onchange="this.form.submit();" default="COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_FILTER">
+  <option value="">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_FILTER</option>
+  <option value="1">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_1</option>
+  <option value="2">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_2</option>
+  <option value="3">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_3</option>
+  <option value="4">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_4</option>
+  <option value="5">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_5</option>
+  <option value="6">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_6</option>
+  <option value="7">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_7</option>
+  <option value="8">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_8</option>
+  <option value="9">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_9</option>
+</field>
+
+
+    </fields>
+
+    <fields name="list">
+
+        <field name="fullordering"
+               type="list"
+               label="COM_THAILANDAREA_LIST_FULL_ORDERING"
+               description="COM_THAILANDAREA_LIST_FULL_ORDERING_DESC"
+               onchange="this.form.submit();"
+               default="a.id DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.`id` ASC">COM_THAILANDAREA_ID_ASC</option><option value="a.`id` DESC">COM_THAILANDAREA_ID_DESC</option><option value="a.`ordering` ASC">COM_THAILANDAREA_ORDERING_ASC</option><option value="a.`ordering` DESC">COM_THAILANDAREA_ORDERING_DESC</option><option value="a.`state` ASC">COM_THAILANDAREA_STATE_ASC</option><option value="a.`state` DESC">COM_THAILANDAREA_STATE_DESC</option><option value="a.`provinces_code` ASC">COM_THAILANDAREA_PROVINCES_CODE_ASC</option><option value="a.`provinces_code` DESC">COM_THAILANDAREA_PROVINCES_CODE_DESC</option><option value="a.`provinces_name_th` ASC">COM_THAILANDAREA_PROVINCES_NAME_TH_ASC</option><option value="a.`provinces_name_th` DESC">COM_THAILANDAREA_PROVINCES_NAME_TH_DESC</option><option value="a.`provinces_name_en` ASC">COM_THAILANDAREA_PROVINCES_NAME_EN_ASC</option><option value="a.`provinces_name_en` DESC">COM_THAILANDAREA_PROVINCES_NAME_EN_DESC</option><option value="a.`provinces_geo_id` ASC">COM_THAILANDAREA_PROVINCES_GEO_ID_ASC</option><option value="a.`provinces_geo_id` DESC">COM_THAILANDAREA_PROVINCES_GEO_ID_DESC</option><option value="a.`provinces_postcode_prefix` ASC">COM_THAILANDAREA_PROVINCES_POSTCODE_PREFIX_ASC</option><option value="a.`provinces_postcode_prefix` DESC">COM_THAILANDAREA_PROVINCES_POSTCODE_PREFIX_DESC</option><option value="a.`provinces_phone_area_code` ASC">COM_THAILANDAREA_PROVINCES_PHONE_AREA_CODE_ASC</option><option value="a.`provinces_phone_area_code` DESC">COM_THAILANDAREA_PROVINCES_PHONE_AREA_CODE_DESC</option><option value="a.`provinces_zone` ASC">COM_THAILANDAREA_PROVINCES_ZONE_ASC</option><option value="a.`provinces_zone` DESC">COM_THAILANDAREA_PROVINCES_ZONE_DESC</option>
+
+        </field>
+
+       <field name="limit"
+               type="limitbox"
+               label="COM_THAILANDAREA_LIST_LIMIT"
+               description="COM_THAILANDAREA_LIST_LIMIT_DESC"
+               class="input-mini"
+               default="25"
+               onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_CREATED_BY" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_CREATED_BY" hidden="true" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_MODIFIED_BY" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_MODIFIED_BY" hidden="true" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_MODIFIED_BY"/>
+    <field name="provinces_code" maxlength="10" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_CODE" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_CODE" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_CODE"/>
+    <field name="provinces_name_th" maxlength="150" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_NAME_TH" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_NAME_TH" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_NAME_TH"/>
+    <field name="provinces_name_en" maxlength="150" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_NAME_EN" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_NAME_EN" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_NAME_EN"/>
+    <field name="provinces_geo_id" maxlength="4" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_GEO_ID" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_GEO_ID" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_GEO_ID"/>
+    <field name="provinces_postcode_prefix" maxlength="4" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_POSTCODE_PREFIX" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_POSTCODE_PREFIX" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_POSTCODE_PREFIX"/>
+    <field name="provinces_phone_area_code" maxlength="4" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_PHONE_AREA_CODE" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_PHONE_AREA_CODE" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_PHONE_AREA_CODE"/>
+    <field name="provinces_zone" default="9" type="list" required="true" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_ZONE" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_ZONE" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_ZONE">
+      <option value="1">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_1</option>
+      <option value="2">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_2</option>
+      <option value="3">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_3</option>
+      <option value="4">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_4</option>
+      <option value="5">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_5</option>
+      <option value="6">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_6</option>
+      <option value="7">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_7</option>
+      <option value="8">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_8</option>
+      <option value="9">COM_THAILANDAREA_PROVINCES_PROVINCES_ZONE_OPTION_9</option>
+    </field>
+    <field name="provinces_logo" directory="/images/thailandarea/" type="media" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_LOGO" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_PROVINCES_LOGO" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_PROVINCES_LOGO"/>
+    <field name="note" rows="4" filter="string" type="textarea" label="COM_THAILANDAREA_FORM_LBL_PROVINCE_NOTE" description="COM_THAILANDAREA_FORM_DESC_PROVINCE_NOTE" hint="COM_THAILANDAREA_FORM_LBL_PROVINCE_NOTE"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_thailandarea" section="province"/>
+  </fieldset>
+</form>

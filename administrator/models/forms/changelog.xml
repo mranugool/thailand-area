@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CREATED_BY" description="COM_THAILANDAREA_FORM_DESC_CHANGELOG_CREATED_BY" hidden="true" hint="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_THAILANDAREA_FORM_LBL_CHANGELOG_MODIFIED_BY" description="COM_THAILANDAREA_FORM_DESC_CHANGELOG_MODIFIED_BY" hidden="true" hint="COM_THAILANDAREA_FORM_LBL_CHANGELOG_MODIFIED_BY"/>
+    <field name="changelog_version" maxlength="10" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOG_VERSION" description="COM_THAILANDAREA_FORM_DESC_CHANGELOG_CHANGELOG_VERSION" hint="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOG_VERSION"/>
+    <field name="changelogs_date" class="inputbox" format="%Y-%m-%d %H:%M:%S" timeformat="24" filter="server_utc" translateformat="true" showtime="true" singleheader="false" todaybutton="true" weeknumbers="false" filltable="false" type="calendar" required="true" label="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOGS_DATE" description="COM_THAILANDAREA_FORM_DESC_CHANGELOG_CHANGELOGS_DATE" hint="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOGS_DATE"/>
+    <field name="changelogs_detail" rows="4" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOGS_DETAIL" description="COM_THAILANDAREA_FORM_DESC_CHANGELOG_CHANGELOGS_DETAIL" hint="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOGS_DETAIL"/>
+    <field name="changelogs_tag" mode="ajax" multiple="true" custom="allow" type="tag" label="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOGS_TAG" description="COM_THAILANDAREA_FORM_DESC_CHANGELOG_CHANGELOGS_TAG" hint="COM_THAILANDAREA_FORM_LBL_CHANGELOG_CHANGELOGS_TAG"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_thailandarea" section="changelog"/>
+  </fieldset>
+</form>

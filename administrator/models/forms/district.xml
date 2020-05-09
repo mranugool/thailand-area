@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_CREATED_BY" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_CREATED_BY" hidden="true" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_MODIFIED_BY" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_MODIFIED_BY" hidden="true" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_MODIFIED_BY"/>
+    <field name="districts_code" maxlength="5" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_CODE" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_DISTRICTS_CODE" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_CODE"/>
+    <field name="districts_name_th" maxlength="150" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_NAME_TH" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_DISTRICTS_NAME_TH" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_NAME_TH"/>
+    <field name="districts_name_en" maxlength="150" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_NAME_EN" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_DISTRICTS_NAME_EN" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_NAME_EN"/>
+    <field name="districts_geo_id" maxlength="4" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_GEO_ID" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_DISTRICTS_GEO_ID" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_GEO_ID"/>
+    <field name="districts_postcode" maxlength="10" filter="string" type="text" required="true" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_POSTCODE" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_DISTRICTS_POSTCODE" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_DISTRICTS_POSTCODE"/>
+    <field name="province_id" type="foreignkey" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_PROVINCE_ID" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_PROVINCE_ID" class="inputbox" input_type="list" table="#__thailand_provinces" key_field="id" value_field="provinces_name_th" ordering="1" default="0"/>
+    <field name="note" rows="4" filter="string" type="textarea" label="COM_THAILANDAREA_FORM_LBL_DISTRICT_NOTE" description="COM_THAILANDAREA_FORM_DESC_DISTRICT_NOTE" hint="COM_THAILANDAREA_FORM_LBL_DISTRICT_NOTE"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_thailandarea" section="district"/>
+  </fieldset>
+</form>

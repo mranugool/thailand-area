@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>Thailand Area</name>
+    <creationDate>2020-05-10</creationDate>
+    <copyright>2020 Anugool Sridum</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Anugool Sridum</author>
+    <authorEmail>a.sridum@gmail.com</authorEmail>
+    <authorUrl>http://www.ditc.co.th</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_THAILANDAREA_XML_DESCRIPTION</description>
+    
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>thailandarea.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_thailandarea" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/en-GB.com_thailandarea.ini</language>
+			<language tag="th-TH">th-TH/th-TH.com_thailandarea.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_THAILANDAREA</menu>
+        <submenu>
+            
+			<menu link="option=com_thailandarea&amp;view=provinces" view="provinces" alt="Thailandarea/Provinces">COM_THAILANDAREA_TITLE_PROVINCES</menu>
+            <menu link="option=com_thailandarea&amp;view=districts" view="districts" alt="Thailandarea/Districts">COM_THAILANDAREA_TITLE_DISTRICTS</menu>
+            <menu link="option=com_thailandarea&amp;view=subdistricts" view="subdistricts" alt="Thailandarea/Subdistricts">COM_THAILANDAREA_TITLE_SUBDISTRICTS</menu>
+            <menu link="option=com_thailandarea&amp;view=changelogs" view="changelogs" alt="Thailandarea/Changelogs">COM_THAILANDAREA_TITLE_CHANGELOGS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>thailandarea.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/en-GB.com_thailandarea.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_thailandarea.sys.ini</language>
+			<language tag="th-TH">th-TH/th-TH.com_thailandarea.ini</language>
+			<language tag="th-TH">th-TH/th-TH.com_thailandarea.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="thailandarea"/>
+    </plugins>
+
+    <updateservers>
+        <server type="collection">https://update.ditc.co.th/thailandarea.xml</server>
+        <server type="extension" priority="2" name="Thailand Area Updates">https://update.ditc.co.th/thailandarea.xml</server>
+    </updateservers>
+    
+</extension>
